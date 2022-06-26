@@ -3,7 +3,7 @@ import DrawCircle from "./functions/circle";
 import SendMousePos from "./functions/position";
 import DrawSquare from "./functions/square";
 import DrawRectangle from "./functions/rectangle";
-//import SendPrint from "./functions/print";
+import SendPrint from "./functions/print";
 
 
 export async function Router(message: any) {
@@ -44,6 +44,9 @@ export async function Router(message: any) {
       return "draw_square";
 
     case "prnt_scrn":
+      SendPrint;
+      let image = await SendPrint();
+      return `prnt_scrn ${image}`;
 
     default:
       console.log("Unknown command!");
