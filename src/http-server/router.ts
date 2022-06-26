@@ -44,9 +44,8 @@ export async function Router(message: any) {
       return "draw_square";
 
     case "prnt_scrn":
-      SendPrint;
-      let image = await SendPrint();
-      return `prnt_scrn ${image}`;
+    let image = await SendPrint();
+    return `prnt_scrn ${image}`;
 
     default:
       console.log("Unknown command!");

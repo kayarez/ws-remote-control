@@ -47,7 +47,6 @@ function Router(message) {
                 (0, square_1.default)(+message[1]);
                 return "draw_square";
             case "prnt_scrn":
-                print_1.default;
                 let image = yield (0, print_1.default)();
                 return `prnt_scrn ${image}`;
             default:
