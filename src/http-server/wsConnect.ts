@@ -11,7 +11,7 @@ export function connect(client: any) {
     const transformedMessage= new TransformMessage();
     const writeMessage = new WriteMessage(client);
     
-    console.log("User connected");
+    console.log("User connected!");
 
     client.send("Hello from websocket server");
 
@@ -22,6 +22,6 @@ export function connect(client: any) {
   
     client.on("close", function () {
 
-        console.log("User disconnected");
+        console.log("User disconnected!");
     });
   }
